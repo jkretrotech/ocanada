@@ -1,6 +1,6 @@
 The Canadian flag and national anthem for playback on a retro dos pc (and others).  Made with WinAGI GDS, targeting the Sierra AGI interperter version 2.917.
 
-
+[![O Canada on a Tandy 1000](https://img.youtube.com/vi/8jnaYhCVMM8/0.jpg)](https://youtube.com/shorts/8jnaYhCVMM8)
 
 No executables are made available in this repo.  To play this, you have a few options:
 
