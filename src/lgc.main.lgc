@@ -1,0 +1,11 @@
+if (currentRoom == 0)
+{
+new.room(rm.canflag);
+}
+
+[ IMPORTANT: This calls the logic for the current room - this
+[ is not done automatically by the interpreter so it has to be
+[ called manually by logic 0.
+call.v(currentRoom);
+
+return();

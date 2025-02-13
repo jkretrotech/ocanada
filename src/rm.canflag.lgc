@@ -1,0 +1,99 @@
+[*********************************************************************
+[
+[ rm.canflag
+[
+[ 
+[
+[*********************************************************************
+
+[***************************************
+[ LOCAL DEFINES
+[***************************************
+
+#define musicDone                  f111
+#define musicDelay                 v111
+musicDelay = 90;
+
+[***************************************
+[ FIRST CYCLE ONLY
+[***************************************
+if(newRoom)
+    {
+    [ load, draw and discard the picture for the current room
+    load.pic(currentRoom);
+    draw.pic(currentRoom);
+    discard.pic(currentRoom);
+    show.pic();
+    
+    [ disable player control and input
+    status.line.off();
+    prevent.input();
+    program.control();
+
+    [ load the theme song
+    load.sound(m.ocanada);
+
+    [ and begin playing
+    sound(m.ocanada, musicDone);
+    
+    display(23, 15, "O Canada!");
+    
+    }
+
+[ check for a keypress or joystick button
+if (have.key())
+{
+quit(1);
+}
+
+
+[ restart theme music if the intro screen is still showing
+[ and end was reached
+if (musicDone)
+  {
+  [ reset the flag
+  reset(musicDone);
+  
+  [ start a timer to set a short delay before restarting music
+  musicDelay = 1;
+  }
+  
+[ if music interlude is active
+if (musicDelay  > 0)
+  {
+  [ increment interlude delay counter
+  musicDelay += 1;
+  
+  [ after 36 cycles
+  if (musicDelay == 36)
+    {
+    [ reset timer
+    musicDelay = 0;
+    
+    [ play it again sam
+    sound(2, musicDone);
+    }
+  }
+
+
+return();
+
+[***************************************
+[ DECLARED MESSAGES
+[***************************************
+#message 1 "O Canada!" 
+#message 2 "Our home and native land,"
+#message 3 "True patriot love"
+#message 4 "in all of us command."
+#message 5 "With glowing hearts"
+#message 6 "we see thee rise,"
+#message 7 "The true north strong and free!"
+#message 8 "From far and wide,"
+#message 9 "O Canada!"
+#message 10 "We stand on guard for thee."
+#message 11 "God keep our land"
+#message 12 "glorious and free!"
+#message 13 "O Canada!"
+#message 14 "We stand on guard for thee"
+#message 15 "O Canada!"
+#message 16 "We stand on guard for thee"

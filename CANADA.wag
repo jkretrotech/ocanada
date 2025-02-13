@@ -1,0 +1,100 @@
+#
+#
+# WinAGI Game Property File for CANADA
+#
+[General]
+   WinAGIVersion = 2.3
+   ResDir = src
+   GameID = CANADA
+   Interpreter = 2.917
+   SourceFileExt = LGC
+   Description = "O Canada!  We stand on guard for thee!"
+   Author = JKRetroTech.net
+   GameVersion = "Version 0.0.1"
+   About = "Canadian National Anthem by C. Lavallee"
+   PlatformType = 1
+   Platform = D:\_dev\agi\dosbox-staging-v0.82.0\dosbox.exe
+   UseResNames = True
+   UseLE = True
+   CodePage = 437
+   SierraSyntax = False
+   LastEdit = "2025-02-12 7:46:30 PM"
+   DOSExec = canada.com
+   PlatformOpts = ""
+   PowerPack = False
+
+[Palette]
+   Color0 = &H00000000
+   Color1 = &H00A00000
+   Color2 = &H0000A000
+   Color3 = &H00A0A000
+   Color4 = &H000000AA
+   Color5 = &H00A00080
+   Color6 = &H000050A0
+   Color7 = &H00A0A0A0
+   Color8 = &H00505050
+   Color9 = &H00FF5050
+   Color10 = &H0050FF00
+   Color11 = &H00FFFF50
+   Color12 = &H005050FF
+   Color13 = &H00FF50FF
+   Color14 = &H0050FFFF
+   Color15 = &H00FFFFFF
+
+[WORDS.TOK]
+   Description = ""
+
+[OBJECT]
+   Description = ""
+
+[::BEGIN Logics::]
+
+[Logic0]
+   ID = lgc.main
+   Description = ""
+   CRC32 = &H1D3CA8AB
+   CompCRC32 = &H1D3CA8AB
+   IsRoom = False
+
+[Logic1]
+   ID = rm.canflag
+   Description = ""
+   CRC32 = &H8F6DC4A2
+   CompCRC32 = &H8F6DC4A2
+   IsRoom = True
+[::END Logics::]
+
+[::BEGIN Pictures::]
+
+[Picture1]
+   ID = p.canflag
+   Description = ""
+   BkgdImg = ""
+[::END Pictures::]
+
+[::BEGIN Sounds::]
+
+[Sound2]
+   ID = m.ocanada
+   Description = ""
+   Key = 0
+   TPQN = 16
+   Inst0 = 80
+   Inst1 = 80
+   Inst2 = 80
+   Mute0 = False
+   Mute1 = False
+   Mute2 = False
+   Mute3 = False
+   Visible0 = True
+   Visible1 = True
+   Visible2 = True
+   Visible3 = True
+[::END Sounds::]
+
+[::BEGIN Views::]
+[::END Views::]
+
+[Sound0]
+   Key = 0
+   TPQN = 16
